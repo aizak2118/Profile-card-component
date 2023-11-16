@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import url("./default.css");
+
+:root {
+  --dark-blue: rgba(46, 51, 73, 1);
+  --grey: rgba(107, 112, 130, 1);
+  --border-grey: rgba(232, 233, 236, 1);
+  --background-blue: rgba(25, 161, 174, 1);
+  --box-shadow: rgba(8, 70, 94, 0.5048);
+  --white: rgba(255, 255, 255, 1);
+
+  --ff-kumbh-sans: "Kumbh Sans", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: var(--ff-kumbh-sans);
+  font-weight: var(--fw-regular);
+  color: var(--dark-blue);
+  font-size: 1.6rem;
+  background: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+  background-repeat: no-repeat;
+  background-color: var(--background-blue);
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 350px;
+  /* height: 374px; */
+  background-color: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 50px 100px -20px var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+  .profile {
+    width: 326px;
+  }
+}
+
+.profile__header {
+  height: 140px;
+  width: 100%;
+  background: url("../images/bg-pattern-card.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.profile__header img {
+  width: 96px;
+  height: 96px;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  margin-bottom: -135px;
+}
+
+.profile__desc,
+.profile__bottom {
+  text-align: center;
+}
+
+.profile__desc {
+  width: 100%;
+  padding-top: 66px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-grey);
+}
+
+.profile__name {
+  font-size: 1.8rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 8px;
+}
+
+.profile__age {
+  font-weight: var(--fw-regular);
+  color: var(--grey);
+  margin-left: 8.5px;
+}
+
+.profile__city {
+  font-size: 1.4rem;
+  color: var(--grey);
+}
+
+.profile__bottom {
+  width: 249px;
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-item__number {
+  font-size: 1.8rem;
+  font-weight: var(--fw-bold);
+}
+
+.bottom-item__title {
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  letter-spacing: 1.5px;
+  color: var(--grey);
+}
